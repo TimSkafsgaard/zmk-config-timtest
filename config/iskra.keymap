@@ -16,7 +16,7 @@
 				&macro_tap &kp L
 				&macro_tap &kp O
 				&macro_tap &kp SPACE 
-				&macro_tap &kp none
+				&macro_tap &kp LCTRL
 				&macro_tap &kp W
 				&macro_tap &kp O
 				&macro_tap &kp R
