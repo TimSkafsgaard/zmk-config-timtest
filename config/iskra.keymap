@@ -28,8 +28,8 @@
 			display-name = "MediaControls";
 			bindings = <
 				&kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT
-				&kp LC(C)   &kp LC(V)        &kp LC(X)
-				&kp LEFT    &kp UP           &kp DOWN    &kp RIGHT
+				&kp C_VOLUME_DOWN &kp C_MUTE &kp C_VOLUME_UP
+				&kp LC(C) &kp LC(V) &kp LC(X) &none
 			>;
 		};
 
