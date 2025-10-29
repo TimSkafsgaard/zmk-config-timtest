@@ -2,6 +2,26 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+macros {
+        hello_world: hello_world {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp H 
+				&macro_tap &kp E
+				&macro_tap &kp L
+				&macro_tap &kp L
+				&macro_tap &kp O
+				&macro_tap &kp SPACE
+				&macro_tap &kp W
+				&macro_tap &kp O
+				&macro_tap &kp R
+				&macro_tap &kp L
+				&macro_tap &kp D
+                >;
+        };
+    };
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -42,10 +62,10 @@
 			>;
 		};
 
-		layer5 {
-			display-name = "Layer5";
+		macro_layer1 {
+			display-name = "Macros 1";
 			bindings = <
-				&none &none &none
+				&hello_world &none &none
 				&none &none &none
 				&none &none &none &none
 			>;
