@@ -42,6 +42,23 @@
 			>;
 		};
 
+		layer5 {
+			display-name = "Layer5";
+			bindings = <
+				&none &none &none
+				&none &none &none
+				&none &none &none &none
+			>;
+		};
+
+		layer6 {
+			display-name = "Layer6";
+			bindings = <
+				&none &none &none
+				&none &none &none
+				&none &none &none &none
+			>;
+		};
 	};
 
 	combos {
@@ -50,6 +67,8 @@
 		combo_base: combo_base { timeout-ms = <150>; key-positions = <0 1 2>; bindings = <&to 0>; };
 		combo_l3: combo_l3 { timeout-ms = <150>; key-positions = <6 7 8>; bindings = <&to 2>; };
 		combo_l4: combo_l4 { timeout-ms = <150>; key-positions = <0 3 6>; bindings = <&to 3>; };
+		combo_l5: combo_l5 { timeout-ms = <150>; key-positions = <1 4 7>; bindings = <&to 4>; };
+		combo_l6: combo_l6 { timeout-ms = <150>; key-positions = <2 5 8>; bindings = <&to 5>; };
 		combo_studio_unlock: combo_studio_unlock { timeout-ms = <150>; key-positions = <0 1>; bindings = <&studio_unlock>; };
 	};
 };
