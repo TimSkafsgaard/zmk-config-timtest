@@ -16,6 +16,7 @@
 				&macro_tap &kp L
 				&macro_tap &kp O
 				&macro_tap &kp SPACE
+				&macro_pause_for &ms 50   
 				&macro_tap &kp W
 				&macro_tap &kp O
 				&macro_tap &kp R
