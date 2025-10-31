@@ -118,6 +118,16 @@
                 &macro_tap &kp E
             >;
         };
+
+		launch_balatro: launch_balatro {
+    		compatible = "zmk,behavior-macro";
+    		#binding-cells = <0>;
+    		bindings = <
+				&macro_tap &kp LCTRL
+				&macro_tap &kp LALT
+				&macro_tap &kp H
+    >;
+};
     };
 	
 	keymap {
@@ -164,7 +174,7 @@
 			bindings = <
 				&hello_world &good_morning &zmk_rules
 				&typing_test &macro_magic &test_phrase
-				&none &none &none &none
+				&none &none &none &launch_balatro
 			>;
 		};
 
