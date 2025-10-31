@@ -10,19 +10,113 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &macro_tap &kp H 
-				&macro_tap &kp E
-				&macro_tap &kp L
-				&macro_tap &kp L
-				&macro_tap &kp O
-				&macro_tap &kp SPACE 
-				&macro_tap &kp LCTRL
-				&macro_tap &kp W
-				&macro_tap &kp O
-				&macro_tap &kp R
-				&macro_tap &kp L
-				&macro_tap &kp D
-                >;
+                &macro_tap &kp H
+                &macro_tap &kp E
+                &macro_tap &kp L
+                &macro_tap &kp L
+                &macro_tap &kp O
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp W
+                &macro_tap &kp O
+                &macro_tap &kp R
+                &macro_tap &kp L
+                &macro_tap &kp D
+            >;
+        };
+
+        good_morning: good_morning {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp G
+                &macro_tap &kp O
+                &macro_tap &kp O
+                &macro_tap &kp D
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp M
+                &macro_tap &kp O
+                &macro_tap &kp R
+                &macro_tap &kp N
+                &macro_tap &kp I
+                &macro_tap &kp N
+                &macro_tap &kp G
+            >;
+        };
+
+        zmk_rules: zmk_rules {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp Z
+                &macro_tap &kp M
+                &macro_tap &kp K
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp R
+                &macro_tap &kp U
+                &macro_tap &kp L
+                &macro_tap &kp E
+                &macro_tap &kp S
+            >;
+        };
+
+        typing_test: typing_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp T
+                &macro_tap &kp Y
+                &macro_tap &kp P
+                &macro_tap &kp I
+                &macro_tap &kp N
+                &macro_tap &kp G
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp T
+                &macro_tap &kp E
+                &macro_tap &kp S
+                &macro_tap &kp T
+            >;
+        };
+
+        macro_magic: macro_magic {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp M
+                &macro_tap &kp A
+                &macro_tap &kp C
+                &macro_tap &kp R
+                &macro_tap &kp O
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp M
+                &macro_tap &kp A
+                &macro_tap &kp G
+                &macro_tap &kp I
+                &macro_tap &kp C
+            >;
+        };
+
+        test_phrase: test_phrase {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap &kp T
+                &macro_tap &kp E
+                &macro_tap &kp S
+                &macro_tap &kp T
+                &macro_tap &kp SPACE
+                &macro_tap &kp LCTRL
+                &macro_tap &kp P
+                &macro_tap &kp H
+                &macro_tap &kp R
+                &macro_tap &kp A
+                &macro_tap &kp S
+                &macro_tap &kp E
+            >;
         };
     };
 	
@@ -68,8 +162,8 @@
 		macro_layer1 {
 			display-name = "Macros 1";
 			bindings = <
-				&hello_world &none &none
-				&none &none &none
+				&hello_world &good_morning &zmk_rules
+				&typing_test &macro_magic &test_phrase
 				&none &none &none &none
 			>;
 		};
@@ -86,12 +180,12 @@
 
 	combos {
 		compatible = "zmk,combos";
-		combo_base: combo_base { timeout-ms = <150>; key-positions = <0 1 2>; bindings = <&to 0>; };
-		combo_bt: combo_bt { timeout-ms = <150>; key-positions = <3 4 5>; bindings = <&to 1>; };
-		combo_media: combo_media { timeout-ms = <150>; key-positions = <6 7 8>; bindings = <&to 2>; };
-		combo_fkeys: combo_fkeys { timeout-ms = <150>; key-positions = <0 3 6>; bindings = <&to 3>; };
-		combo_l5: combo_l5 { timeout-ms = <150>; key-positions = <1 4 7>; bindings = <&to 4>; };
-		combo_l6: combo_l6 { timeout-ms = <150>; key-positions = <2 5 8>; bindings = <&to 5>; };
+		combo_base: combo_base { timeout-ms = <150>; key-positions = <0 9>; bindings = <&to 0>; };
+		combo_bt: combo_bt { timeout-ms = <150>; key-positions = <1 9>; bindings = <&to 1>; };
+		combo_media: combo_media { timeout-ms = <150>; key-positions = <2 9>; bindings = <&to 2>; };
+		combo_fkeys: combo_fkeys { timeout-ms = <150>; key-positions = <3 9>; bindings = <&to 3>; };
+		combo_l5: combo_l5 { timeout-ms = <150>; key-positions = <4 9>; bindings = <&to 4>; };
+		combo_l6: combo_l6 { timeout-ms = <150>; key-positions = <5 9>; bindings = <&to 5>; };
 		combo_studio_unlock: combo_studio_unlock { timeout-ms = <150>; key-positions = <0 1>; bindings = <&studio_unlock>; };
 	};
 };
